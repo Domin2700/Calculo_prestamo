@@ -96,6 +96,7 @@
             this.jToolStripMenuItem.Size = new System.Drawing.Size(268, 295);
             this.jToolStripMenuItem.Text = "Mantenimiento";
             this.jToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.jToolStripMenuItem.Click += new System.EventHandler(this.jToolStripMenuItem_Click);
             // 
             // FmrPrincipal
             // 
@@ -107,7 +108,7 @@
             this.Font = new System.Drawing.Font("Sitka Small", 13.8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FmrPrincipal";
             this.Text = "Calculadora de prestamos";
             this.Load += new System.EventHandler(this.FmrPrincipal_Load);

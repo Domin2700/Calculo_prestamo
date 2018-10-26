@@ -44,5 +44,11 @@ namespace Caluladora_Prestamo
             FrmCobros Cobros = new FrmCobros();
             Cobros.Show();
         }
+
+        private void jToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FomMantenimientos Man = new FomMantenimientos();
+            Man.ShowDialog();
+        }
     }
 }
