@@ -39,9 +39,9 @@
             // 
             this.BtnUsuarios.Font = new System.Drawing.Font("Sitka Small", 13.8F);
             this.BtnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuarios.Image")));
-            this.BtnUsuarios.Location = new System.Drawing.Point(88, 120);
+            this.BtnUsuarios.Location = new System.Drawing.Point(88, 51);
             this.BtnUsuarios.Name = "BtnUsuarios";
-            this.BtnUsuarios.Size = new System.Drawing.Size(304, 271);
+            this.BtnUsuarios.Size = new System.Drawing.Size(365, 340);
             this.BtnUsuarios.TabIndex = 0;
             this.BtnUsuarios.Text = "Usuarios";
             this.BtnUsuarios.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -53,9 +53,9 @@
             // 
             this.BtnTarfa.Font = new System.Drawing.Font("Sitka Small", 13.8F);
             this.BtnTarfa.Image = ((System.Drawing.Image)(resources.GetObject("BtnTarfa.Image")));
-            this.BtnTarfa.Location = new System.Drawing.Point(526, 120);
+            this.BtnTarfa.Location = new System.Drawing.Point(502, 51);
             this.BtnTarfa.Name = "BtnTarfa";
-            this.BtnTarfa.Size = new System.Drawing.Size(304, 271);
+            this.BtnTarfa.Size = new System.Drawing.Size(365, 340);
             this.BtnTarfa.TabIndex = 1;
             this.BtnTarfa.Text = "Tarifas";
             this.BtnTarfa.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -67,7 +67,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Sitka Small", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(320, 19);
+            this.label16.Location = new System.Drawing.Point(322, -2);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(284, 50);
             this.label16.TabIndex = 46;

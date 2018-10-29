@@ -43,8 +43,10 @@
             this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.TxtCodigoPrestamo = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.RdbSemanal = new System.Windows.Forms.RadioButton();
+            this.RdbMensual = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
             this.TxtFechaPrestamo = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,10 +64,8 @@
             this.BtnCliente = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.RdbSemanal = new System.Windows.Forms.RadioButton();
-            this.RdbMensual = new System.Windows.Forms.RadioButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.BtnLimpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -180,9 +180,9 @@
             this.groupBox1.Controls.Add(this.TxtApellidos);
             this.groupBox1.Controls.Add(this.TxtCedula);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(22, 109);
+            this.groupBox1.Location = new System.Drawing.Point(22, 130);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(524, 531);
+            this.groupBox1.Size = new System.Drawing.Size(524, 510);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -209,10 +209,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.TxtBuscar);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.TxtCodigoPrestamo);
-            this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.TxtFechaPrestamo);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label10);
@@ -224,195 +225,21 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.CmbMonto);
-            this.groupBox2.Location = new System.Drawing.Point(568, 109);
+            this.groupBox2.Location = new System.Drawing.Point(568, 64);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(363, 637);
+            this.groupBox2.Size = new System.Drawing.Size(363, 682);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             // 
-            // TxtCodigoPrestamo
+            // groupBox3
             // 
-            this.TxtCodigoPrestamo.Location = new System.Drawing.Point(235, 299);
-            this.TxtCodigoPrestamo.Multiline = true;
-            this.TxtCodigoPrestamo.Name = "TxtCodigoPrestamo";
-            this.TxtCodigoPrestamo.ReadOnly = true;
-            this.TxtCodigoPrestamo.Size = new System.Drawing.Size(108, 35);
-            this.TxtCodigoPrestamo.TabIndex = 11;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(12, 298);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(227, 35);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Codigo Prestamo:";
-            // 
-            // TxtFechaPrestamo
-            // 
-            this.TxtFechaPrestamo.Location = new System.Drawing.Point(218, 252);
-            this.TxtFechaPrestamo.Multiline = true;
-            this.TxtFechaPrestamo.Name = "TxtFechaPrestamo";
-            this.TxtFechaPrestamo.ReadOnly = true;
-            this.TxtFechaPrestamo.Size = new System.Drawing.Size(125, 35);
-            this.TxtFechaPrestamo.TabIndex = 9;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 252);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(215, 35);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Fecha Prestamo:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(14, 331);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(329, 20);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "________________________________";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(70, 351);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(247, 35);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Resumen Prestamo";
-            // 
-            // ListDetalle
-            // 
-            this.ListDetalle.Location = new System.Drawing.Point(6, 389);
-            this.ListDetalle.Name = "ListDetalle";
-            this.ListDetalle.Size = new System.Drawing.Size(351, 238);
-            this.ListDetalle.TabIndex = 5;
-            this.ListDetalle.UseCompatibleStateImageBehavior = false;
-            // 
-            // TxtMonto
-            // 
-            this.TxtMonto.Location = new System.Drawing.Point(203, 155);
-            this.TxtMonto.Multiline = true;
-            this.TxtMonto.Name = "TxtMonto";
-            this.TxtMonto.ReadOnly = true;
-            this.TxtMonto.Size = new System.Drawing.Size(140, 35);
-            this.TxtMonto.TabIndex = 6;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 155);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(187, 35);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "No. de cuotas:";
-            // 
-            // CmbPagoXdia
-            // 
-            this.CmbPagoXdia.FormattingEnabled = true;
-            this.CmbPagoXdia.Location = new System.Drawing.Point(235, 214);
-            this.CmbPagoXdia.Name = "CmbPagoXdia";
-            this.CmbPagoXdia.Size = new System.Drawing.Size(108, 24);
-            this.CmbPagoXdia.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 203);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(229, 35);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Pago por dia RD$:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 103);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(157, 35);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Monto RD$:";
-            // 
-            // CmbMonto
-            // 
-            this.CmbMonto.FormattingEnabled = true;
-            this.CmbMonto.Location = new System.Drawing.Point(175, 112);
-            this.CmbMonto.Name = "CmbMonto";
-            this.CmbMonto.Size = new System.Drawing.Size(168, 24);
-            this.CmbMonto.TabIndex = 0;
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.Font = new System.Drawing.Font("Sitka Small", 13.8F);
-            this.BtnSalir.Location = new System.Drawing.Point(19, 674);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(149, 62);
-            this.BtnSalir.TabIndex = 13;
-            this.BtnSalir.Text = "Salir";
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.Font = new System.Drawing.Font("Sitka Small", 13.8F);
-            this.BtnGuardar.Location = new System.Drawing.Point(202, 674);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(149, 62);
-            this.BtnGuardar.TabIndex = 14;
-            this.BtnGuardar.Text = "Guardar";
-            this.BtnGuardar.UseVisualStyleBackColor = true;
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // BtnCalcular
-            // 
-            this.BtnCalcular.Font = new System.Drawing.Font("Sitka Small", 13.8F);
-            this.BtnCalcular.Location = new System.Drawing.Point(387, 674);
-            this.BtnCalcular.Name = "BtnCalcular";
-            this.BtnCalcular.Size = new System.Drawing.Size(149, 62);
-            this.BtnCalcular.TabIndex = 16;
-            this.BtnCalcular.Text = "Calcular";
-            this.BtnCalcular.UseVisualStyleBackColor = true;
-            // 
-            // BtnCliente
-            // 
-            this.BtnCliente.Font = new System.Drawing.Font("Sitka Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCliente.Image")));
-            this.BtnCliente.Location = new System.Drawing.Point(22, 12);
-            this.BtnCliente.Name = "BtnCliente";
-            this.BtnCliente.Size = new System.Drawing.Size(145, 91);
-            this.BtnCliente.TabIndex = 17;
-            this.BtnCliente.Text = "Listar clientes";
-            this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.BtnCliente.UseVisualStyleBackColor = true;
-            // 
-            // TxtBuscar
-            // 
-            this.TxtBuscar.Location = new System.Drawing.Point(823, 67);
-            this.TxtBuscar.Multiline = true;
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(88, 36);
-            this.TxtBuscar.TabIndex = 46;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(493, 67);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(331, 35);
-            this.label16.TabIndex = 45;
-            this.label16.Text = "Buscar cliente por codigo:";
+            this.groupBox3.Controls.Add(this.RdbSemanal);
+            this.groupBox3.Controls.Add(this.RdbMensual);
+            this.groupBox3.Location = new System.Drawing.Point(24, 119);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(325, 47);
+            this.groupBox3.TabIndex = 25;
+            this.groupBox3.TabStop = false;
             // 
             // RdbSemanal
             // 
@@ -442,29 +269,204 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(70, 15);
+            this.label11.Location = new System.Drawing.Point(76, 81);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(226, 35);
             this.label11.TabIndex = 24;
             this.label11.Text = "Tipo de prestamo";
             // 
-            // groupBox3
+            // TxtFechaPrestamo
             // 
-            this.groupBox3.Controls.Add(this.RdbSemanal);
-            this.groupBox3.Controls.Add(this.RdbMensual);
-            this.groupBox3.Location = new System.Drawing.Point(18, 53);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(325, 47);
-            this.groupBox3.TabIndex = 25;
-            this.groupBox3.TabStop = false;
+            this.TxtFechaPrestamo.Location = new System.Drawing.Point(224, 318);
+            this.TxtFechaPrestamo.Multiline = true;
+            this.TxtFechaPrestamo.Name = "TxtFechaPrestamo";
+            this.TxtFechaPrestamo.ReadOnly = true;
+            this.TxtFechaPrestamo.Size = new System.Drawing.Size(125, 35);
+            this.TxtFechaPrestamo.TabIndex = 9;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(18, 318);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(215, 35);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Fecha Prestamo:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 352);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(329, 20);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "________________________________";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(76, 372);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(247, 35);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Resumen Prestamo";
+            // 
+            // ListDetalle
+            // 
+            this.ListDetalle.Location = new System.Drawing.Point(12, 410);
+            this.ListDetalle.Name = "ListDetalle";
+            this.ListDetalle.Size = new System.Drawing.Size(351, 268);
+            this.ListDetalle.TabIndex = 5;
+            this.ListDetalle.UseCompatibleStateImageBehavior = false;
+            // 
+            // TxtMonto
+            // 
+            this.TxtMonto.Location = new System.Drawing.Point(209, 221);
+            this.TxtMonto.Multiline = true;
+            this.TxtMonto.Name = "TxtMonto";
+            this.TxtMonto.ReadOnly = true;
+            this.TxtMonto.Size = new System.Drawing.Size(140, 35);
+            this.TxtMonto.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(18, 221);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(187, 35);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "No. de cuotas:";
+            // 
+            // CmbPagoXdia
+            // 
+            this.CmbPagoXdia.FormattingEnabled = true;
+            this.CmbPagoXdia.Location = new System.Drawing.Point(241, 280);
+            this.CmbPagoXdia.Name = "CmbPagoXdia";
+            this.CmbPagoXdia.Size = new System.Drawing.Size(108, 24);
+            this.CmbPagoXdia.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(18, 269);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(229, 35);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Pago por dia RD$:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(18, 169);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(157, 35);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Monto RD$:";
+            // 
+            // CmbMonto
+            // 
+            this.CmbMonto.FormattingEnabled = true;
+            this.CmbMonto.Location = new System.Drawing.Point(181, 178);
+            this.CmbMonto.Name = "CmbMonto";
+            this.CmbMonto.Size = new System.Drawing.Size(168, 24);
+            this.CmbMonto.TabIndex = 0;
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.Font = new System.Drawing.Font("Sitka Small", 13.8F);
+            this.BtnSalir.Location = new System.Drawing.Point(12, 673);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(126, 62);
+            this.BtnSalir.TabIndex = 13;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.Font = new System.Drawing.Font("Sitka Small", 13.8F);
+            this.BtnGuardar.Location = new System.Drawing.Point(283, 674);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(126, 62);
+            this.BtnGuardar.TabIndex = 14;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // BtnCalcular
+            // 
+            this.BtnCalcular.Font = new System.Drawing.Font("Sitka Small", 13.8F);
+            this.BtnCalcular.Location = new System.Drawing.Point(420, 674);
+            this.BtnCalcular.Name = "BtnCalcular";
+            this.BtnCalcular.Size = new System.Drawing.Size(126, 62);
+            this.BtnCalcular.TabIndex = 16;
+            this.BtnCalcular.Text = "Calcular";
+            this.BtnCalcular.UseVisualStyleBackColor = true;
+            // 
+            // BtnCliente
+            // 
+            this.BtnCliente.Font = new System.Drawing.Font("Sitka Small", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCliente.Image")));
+            this.BtnCliente.Location = new System.Drawing.Point(22, 5);
+            this.BtnCliente.Name = "BtnCliente";
+            this.BtnCliente.Size = new System.Drawing.Size(156, 106);
+            this.BtnCliente.TabIndex = 17;
+            this.BtnCliente.Text = "Listar clientes";
+            this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.BtnCliente.UseVisualStyleBackColor = true;
+            // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Location = new System.Drawing.Point(265, 27);
+            this.TxtBuscar.Multiline = true;
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(88, 36);
+            this.TxtBuscar.TabIndex = 46;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(12, 27);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(247, 35);
+            this.label16.TabIndex = 45;
+            this.label16.Text = "Buscar  por codigo:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(24, 66);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(329, 20);
+            this.label15.TabIndex = 47;
+            this.label15.Text = "________________________________";
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.Font = new System.Drawing.Font("Sitka Small", 13.8F);
+            this.BtnLimpiar.Location = new System.Drawing.Point(151, 674);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(126, 62);
+            this.BtnLimpiar.TabIndex = 18;
+            this.BtnLimpiar.Text = "Limpiar";
+            this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // FrmPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 748);
-            this.Controls.Add(this.TxtBuscar);
-            this.Controls.Add(this.label16);
+            this.ClientSize = new System.Drawing.Size(947, 747);
+            this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.BtnCliente);
             this.Controls.Add(this.BtnCalcular);
             this.Controls.Add(this.BtnGuardar);
@@ -481,7 +483,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -515,8 +516,6 @@
         private System.Windows.Forms.TextBox TxtFechaPrestamo;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button BtnCalcular;
-        private System.Windows.Forms.TextBox TxtCodigoPrestamo;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button BtnCliente;
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.Label label16;
@@ -524,5 +523,7 @@
         private System.Windows.Forms.RadioButton RdbSemanal;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button BtnLimpiar;
     }
 }
