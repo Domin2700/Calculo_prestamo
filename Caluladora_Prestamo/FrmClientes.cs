@@ -26,5 +26,10 @@ namespace Caluladora_Prestamo
         {
             this.Close();
         }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            new Controles().Limpiar(this);
+        }
     }
 }

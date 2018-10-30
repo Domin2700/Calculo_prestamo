@@ -39,7 +39,7 @@ namespace Caluladora_Prestamo
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
-             new Controles().Limpiar(this, groupBox1);
+             new Controles().Limpiar(groupBox1,groupBox2);
         }
     }
 }

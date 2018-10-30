@@ -277,11 +277,11 @@
             // 
             // TxtFechaPrestamo
             // 
-            this.TxtFechaPrestamo.Location = new System.Drawing.Point(224, 318);
+            this.TxtFechaPrestamo.Location = new System.Drawing.Point(239, 318);
             this.TxtFechaPrestamo.Multiline = true;
             this.TxtFechaPrestamo.Name = "TxtFechaPrestamo";
             this.TxtFechaPrestamo.ReadOnly = true;
-            this.TxtFechaPrestamo.Size = new System.Drawing.Size(125, 35);
+            this.TxtFechaPrestamo.Size = new System.Drawing.Size(110, 35);
             this.TxtFechaPrestamo.TabIndex = 9;
             // 
             // label13
@@ -324,11 +324,11 @@
             // 
             // TxtMonto
             // 
-            this.TxtMonto.Location = new System.Drawing.Point(209, 221);
+            this.TxtMonto.Location = new System.Drawing.Point(224, 221);
             this.TxtMonto.Multiline = true;
             this.TxtMonto.Name = "TxtMonto";
             this.TxtMonto.ReadOnly = true;
-            this.TxtMonto.Size = new System.Drawing.Size(140, 35);
+            this.TxtMonto.Size = new System.Drawing.Size(125, 35);
             this.TxtMonto.TabIndex = 6;
             // 
             // label9
@@ -344,9 +344,9 @@
             // CmbPagoXdia
             // 
             this.CmbPagoXdia.FormattingEnabled = true;
-            this.CmbPagoXdia.Location = new System.Drawing.Point(241, 280);
+            this.CmbPagoXdia.Location = new System.Drawing.Point(253, 280);
             this.CmbPagoXdia.Name = "CmbPagoXdia";
-            this.CmbPagoXdia.Size = new System.Drawing.Size(108, 24);
+            this.CmbPagoXdia.Size = new System.Drawing.Size(96, 24);
             this.CmbPagoXdia.TabIndex = 4;
             // 
             // label7
@@ -372,9 +372,9 @@
             // CmbMonto
             // 
             this.CmbMonto.FormattingEnabled = true;
-            this.CmbMonto.Location = new System.Drawing.Point(181, 178);
+            this.CmbMonto.Location = new System.Drawing.Point(194, 178);
             this.CmbMonto.Name = "CmbMonto";
-            this.CmbMonto.Size = new System.Drawing.Size(168, 24);
+            this.CmbMonto.Size = new System.Drawing.Size(155, 24);
             this.CmbMonto.TabIndex = 0;
             // 
             // BtnSalir
@@ -424,10 +424,10 @@
             // 
             // TxtBuscar
             // 
-            this.TxtBuscar.Location = new System.Drawing.Point(265, 27);
+            this.TxtBuscar.Location = new System.Drawing.Point(277, 27);
             this.TxtBuscar.Multiline = true;
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(88, 36);
+            this.TxtBuscar.Size = new System.Drawing.Size(76, 36);
             this.TxtBuscar.TabIndex = 46;
             // 
             // label16
