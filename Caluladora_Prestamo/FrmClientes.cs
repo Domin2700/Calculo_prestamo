@@ -31,5 +31,10 @@ namespace Caluladora_Prestamo
         {
             new Controles().Limpiar(this);
         }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            new Controles().Validar(this);
+        }
     }
 }

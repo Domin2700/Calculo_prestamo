@@ -9,14 +9,16 @@ namespace Caluladora_Prestamo
 {
     class Controles
     {
+        //private bool vacio = false;
+        //private DialogResult mensaje;
 
-        public void Limpiar(GroupBox group1,GroupBox group2)
+        public void Limpiar(GroupBox group1, GroupBox group2)
         {
 
-           foreach(var txt in group1.Controls)
-                {
-                    
-                    if(txt is TextBox)
+            foreach (var txt in group1.Controls)
+            {
+
+                if (txt is TextBox)
 
                 {
                     ((TextBox)txt).Clear();
@@ -24,12 +26,12 @@ namespace Caluladora_Prestamo
                 }
 
 
-                }
-                        
-           foreach(var txt in group2.Controls)
+            }
+
+            foreach (var txt in group2.Controls)
             {
 
-                if(txt is TextBox)
+                if (txt is TextBox)
 
                 {
                     ((TextBox)txt).Clear();
@@ -55,7 +57,7 @@ namespace Caluladora_Prestamo
 
             }
 
-                
+
 
 
 
@@ -65,13 +67,14 @@ namespace Caluladora_Prestamo
         public void Limpiar(GroupBox group1)
         {
 
-            foreach( var txt in group1.Controls)
+            foreach (var txt in group1.Controls)
             {
 
-                if(txt is TextBox)
+                if (txt is TextBox)
                 {
 
                     ((TextBox)txt).Clear();
+
 
                 }
 
@@ -97,10 +100,10 @@ namespace Caluladora_Prestamo
         public void Limpiar(Control form)
         {
 
-            foreach(var txt in form.Controls)
+            foreach (var txt in form.Controls)
             {
 
-                if(txt is TextBox)
+                if (txt is TextBox)
                 {
 
                     ((TextBox)txt).Clear();
@@ -113,5 +116,39 @@ namespace Caluladora_Prestamo
         }
 
 
+        public void Validar(Control group1/*, GroupBox group2*/ )
+        {
+
+            foreach (var txt in group1.Controls)
+            {
+
+                if (txt is TextBox && ((TextBox)txt).Text == String.Empty)
+                {
+
+                    MessageBox.Show("Campo vacio!", "No deje campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+                }
+
+
+            }
+
+            /* foreach(var txt in group2.Controls)
+             {
+
+                 if(txt is TextBox && ((TextBox)txt).Text == String.Empty)
+                 {
+
+                     MessageBox.Show("Campo vacio!", "No deje campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                 }*/
+
+
+        } 
+
+
+
+        }
+
+
     }
-}
+

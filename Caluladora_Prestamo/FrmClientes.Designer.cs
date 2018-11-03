@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtNombres = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,6 +42,8 @@
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.EpError = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.EpError)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtDireccion
@@ -153,6 +156,7 @@
             this.BtnGuardar.TabIndex = 21;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnSalir
             // 
@@ -164,6 +168,10 @@
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // EpError
+            // 
+            this.EpError.ContainerControl = this;
             // 
             // FrmClientes
             // 
@@ -184,8 +192,9 @@
             this.Controls.Add(this.TxtCedula);
             this.Controls.Add(this.label3);
             this.Name = "FrmClientes";
-            this.Text = "FrmClientes";
+            this.Text = "Clientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.EpError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +215,6 @@
         private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button BtnSalir;
+        private System.Windows.Forms.ErrorProvider EpError;
     }
 }
