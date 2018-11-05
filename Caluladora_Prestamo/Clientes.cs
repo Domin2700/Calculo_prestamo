@@ -25,6 +25,7 @@ namespace Caluladora_Prestamo
         public string NOMBRES { get; set; }
         public string APELLIDOS { get; set; }
         public string CEDULA { get; set; }
+        public string CELULAR { get; set; }
         public string DIRECCION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -116,8 +116,9 @@ namespace Caluladora_Prestamo
         }
 
 
-        public void Validar(Control group1/*, GroupBox group2*/ )
+        public bool Validar(Control group1/*, GroupBox group2*/ )
         {
+            bool b = false;
 
             foreach (var txt in group1.Controls)
             {
@@ -126,11 +127,16 @@ namespace Caluladora_Prestamo
                 {
 
                     MessageBox.Show("Campo vacio!", "No deje campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    break;
+                    
                 }
 
+                else { b = true; }
 
+                break;
             }
+
+           
+            return b;
 
             /* foreach(var txt in group2.Controls)
              {

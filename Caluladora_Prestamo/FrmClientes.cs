@@ -12,6 +12,8 @@ namespace Caluladora_Prestamo
 {
     public partial class FrmClientes : Form
     {
+        Controles controls = new Controles();
+
         public FrmClientes()
         {
             InitializeComponent();
@@ -29,12 +31,33 @@ namespace Caluladora_Prestamo
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
-            new Controles().Limpiar(this);
+            controls.Limpiar(this);
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            new Controles().Validar(this);
+            /*if (new Controles().Validar(this))
+            {
+
+                
+
+            }*/
+
+
+            Cliente campos = new Cliente
+            {
+                NOMBRES = TxtNombres.Text,
+                APELLIDOS = TxtApellidos.Text,
+                CEDULA = TxtCedula.Text,
+                CELULAR = TxtCelular.Text,
+                DIRECION = TxtDireccion.Text
+                
+
+            };
+        
+            new Mantenimiento().InsertClientes(campos);
+            controls.Limpiar(this);
+
         }
     }
 }

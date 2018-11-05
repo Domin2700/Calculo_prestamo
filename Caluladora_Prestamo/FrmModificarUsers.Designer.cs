@@ -42,6 +42,8 @@
             this.TxtCedula = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.Editar = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Borrar = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +67,7 @@
             this.BtnGuardar.TabIndex = 34;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnSalir
             // 
@@ -170,11 +173,29 @@
             // DgvUsuarios
             // 
             this.DgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Editar,
+            this.Borrar});
             this.DgvUsuarios.Location = new System.Drawing.Point(-1, 438);
             this.DgvUsuarios.Name = "DgvUsuarios";
             this.DgvUsuarios.RowTemplate.Height = 24;
             this.DgvUsuarios.Size = new System.Drawing.Size(789, 329);
             this.DgvUsuarios.TabIndex = 36;
+            this.DgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
+            // 
+            // Editar
+            // 
+            this.Editar.Frozen = true;
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            // 
+            // Borrar
+            // 
+            this.Borrar.Frozen = true;
+            this.Borrar.HeaderText = "Borrar";
+            this.Borrar.Name = "Borrar";
+            this.Borrar.ReadOnly = true;
             // 
             // FrmModificarUsers
             // 
@@ -197,6 +218,7 @@
             this.Controls.Add(this.label3);
             this.Name = "FrmModificarUsers";
             this.Text = "Modificar usuarios";
+            this.Load += new System.EventHandler(this.FrmModificarUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,5 +241,7 @@
         private System.Windows.Forms.TextBox TxtCedula;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView DgvUsuarios;
+        private System.Windows.Forms.DataGridViewLinkColumn Editar;
+        private System.Windows.Forms.DataGridViewLinkColumn Borrar;
     }
 }

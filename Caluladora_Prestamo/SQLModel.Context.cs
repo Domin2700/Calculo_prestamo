@@ -13,10 +13,10 @@ namespace Caluladora_Prestamo
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_prestamo : DbContext
+    public partial class SQLEntities : DbContext
     {
-        public DB_prestamo()
-            : base("name=DB_prestamo")
+        public SQLEntities()
+            : base("name=SQLEntities")
         {
         }
     

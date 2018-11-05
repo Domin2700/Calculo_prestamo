@@ -22,6 +22,7 @@ namespace Caluladora_Prestamo
     
         public int ID_TARIFA { get; set; }
         public double MONTO { get; set; }
+        public double MONTO_CUOTA { get; set; }
         public int NO_CUOTA { get; set; }
         public Nullable<int> TIPO { get; set; }
     
