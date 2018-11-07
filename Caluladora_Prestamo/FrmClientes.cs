@@ -50,7 +50,7 @@ namespace Caluladora_Prestamo
                 APELLIDOS = TxtApellidos.Text,
                 CEDULA = TxtCedula.Text,
                 CELULAR = TxtCelular.Text,
-                DIRECION = TxtDireccion.Text
+                DIRECCION = TxtDireccion.Text
                 
 
             };

@@ -13,7 +13,7 @@ namespace Caluladora_Prestamo
         public string APELLIDOS { get; set; }
         public string CEDULA { get; set; }
         public string CELULAR { get; set; }
-        public string DIRECION { get; set; }
+        public string DIRECCION { get; set; }
 
 
     }

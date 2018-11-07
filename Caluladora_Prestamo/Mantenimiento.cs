@@ -22,13 +22,104 @@ namespace Caluladora_Prestamo
             cliente.APELLIDOS = campos.APELLIDOS;
             cliente.CEDULA = campos.CEDULA;
             cliente.CELULAR = campos.CELULAR;
-            cliente.DIRECCION = campos.DIRECION;
+            cliente.DIRECCION = campos.DIRECCION;
 
             db.Clientes.Add(cliente);
             db.SaveChanges();
 
 
         }
+
+        public List<Cliente> SelectClietes()
+        {
+
+            var Clientes = from Cl in db.Clientes
+                           select Cl;
+
+            List<Cliente> Client = new List<Cliente>();
+
+            foreach (var campos in Clientes)
+            {
+                Client.Add(new Cliente
+                {
+
+                    ID_CLIENTE = Convert.ToInt16(campos.ID_CLIENTE),
+                    NOMBRES = campos.NOMBRES,
+                    APELLIDOS = campos.APELLIDOS,
+                    CEDULA = campos.CEDULA,
+                    CELULAR = campos.CELULAR,
+                    DIRECCION = campos.DIRECCION
+
+                });
+
+
+            }
+
+            return Client;
+
+
+        }
+
+
+        public List<Cliente> SelectClietes(string buscar)
+        {
+
+            var Clientes = from Cl in db.Clientes
+                           where Cl.NOMBRES.Contains(buscar) || Cl.APELLIDOS.Contains(buscar) || Cl.CEDULA.Contains(buscar)
+                           select Cl;
+
+            List<Cliente> Client = new List<Cliente>();
+
+            foreach (var campos in Clientes)
+            {
+                Client.Add(new Cliente
+                {
+
+                    ID_CLIENTE = Convert.ToInt16(campos.ID_CLIENTE),
+                    NOMBRES = campos.NOMBRES,
+                    APELLIDOS = campos.APELLIDOS,
+                    CEDULA = campos.CEDULA,
+                    CELULAR = campos.CELULAR,
+                    DIRECCION = campos.DIRECCION
+
+                });
+
+
+            }
+
+            return Client;
+
+
+        }
+
+        public void DeleteCliente(int idc)
+        {
+            var cliente = db.Clientes.Where(id => id.ID_CLIENTE == idc).FirstOrDefault();
+
+            db.Clientes.Remove(cliente);
+            db.SaveChanges();
+
+
+
+
+        }
+
+        public void UpdateCliente(Cliente campos)
+        {
+            var cliente = db.Clientes.Where(id => id.ID_CLIENTE == campos.ID_CLIENTE).FirstOrDefault();
+
+            cliente.NOMBRES = campos.NOMBRES;
+            cliente.APELLIDOS = campos.APELLIDOS;
+            cliente.CEDULA = campos.CEDULA;
+            cliente.CELULAR = campos.CELULAR;
+            cliente.DIRECCION = campos.DIRECCION;
+            db.SaveChanges();
+
+
+        }
+
+
+
 
         public void InsertTarifa(Tarifa campos)
         {
@@ -56,7 +147,8 @@ namespace Caluladora_Prestamo
             List < Tarifa > tarif = new List<Tarifa>();
             foreach (var campos in tarifa)
             {
-                tarif.Add(new Tarifa {
+                tarif.Add(new Tarifa
+                {
 
                     ID_TARIFA = Convert.ToInt16(campos.ID_TARIFA),
                     MONTO = float.Parse(campos.MONTO.ToString()),
@@ -95,34 +187,7 @@ namespace Caluladora_Prestamo
 
 
 
-        public List<Cliente> SelectClietes()
-        {
-
-            var Clientes = from Cl in db.Clientes
-                           select Cl;
-
-            List<Cliente> Client = new List<Cliente>();
-
-            foreach(var campos in Clientes)
-            {
-                Client.Add(new Cliente {
-
-                    ID_CLIENTE = Convert.ToInt16(campos.ID_CLIENTE),
-                    NOMBRES = campos.NOMBRES,
-                    APELLIDOS = campos.APELLIDOS,
-                    CEDULA = campos.CEDULA,
-                    CELULAR = campos.CELULAR,
-                    DIRECION = campos.DIRECCION
-
-                });
-
-
-            }
-
-            return Client;
-
-
-        }
+        
 
 
        
