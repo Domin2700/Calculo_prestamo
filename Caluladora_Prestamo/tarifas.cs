@@ -14,19 +14,10 @@ namespace Caluladora_Prestamo
     
     public partial class tarifas
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tarifas()
-        {
-            this.prestamo = new HashSet<prestamo>();
-        }
-    
         public int ID_TARIFA { get; set; }
         public double MONTO { get; set; }
         public double MONTO_CUOTA { get; set; }
         public int NO_CUOTA { get; set; }
         public Nullable<int> TIPO { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<prestamo> prestamo { get; set; }
     }
 }

@@ -22,13 +22,14 @@ namespace Caluladora_Prestamo
     
         public int ID_PRESTAMO { get; set; }
         public int ID_CLIENTE { get; set; }
-        public int ID_TARIFA { get; set; }
         public string TIPO { get; set; }
         public double MONTO_CALCULADO { get; set; }
+        public double MONTO { get; set; }
+        public double MONTO_CUOTA { get; set; }
+        public int NO_CUOTA { get; set; }
     
         public virtual Clientes Clientes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<pagos> pagos { get; set; }
-        public virtual tarifas tarifas { get; set; }
     }
 }

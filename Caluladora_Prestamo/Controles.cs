@@ -50,7 +50,7 @@ namespace Caluladora_Prestamo
 
                 {
 
-                    //((ComboBox)txt).SelectedIndex = 0;
+                   ((ComboBox)txt).SelectedIndex = 0;
 
                 }
 
@@ -90,6 +90,11 @@ namespace Caluladora_Prestamo
                     ((DataGridView)txt).Rows.Clear();
 
                 }
+                else if(txt is MaskedTextBox)
+                {
+
+                    ((MaskedTextBox)txt).Clear();
+                }
 
             }
 
@@ -109,6 +114,12 @@ namespace Caluladora_Prestamo
                     ((TextBox)txt).Clear();
 
                 }
+
+                else if(txt is MaskedTextBox)
+                    {
+
+                    ((MaskedTextBox)txt).Clear();
+                    }
 
 
             }

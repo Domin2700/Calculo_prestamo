@@ -28,6 +28,18 @@ namespace Caluladora_Prestamo
 
     }
 
+    public class Prestamo
+    {
 
+        public int ID_PRESTAMO { get; set; }
+        public int ID_CLIENTE { get; set; }
+        public int ID_TARIFA { get; set; }
+        public string TIPO { get; set; }
+        public float MONTO { get; set; }
+        public float MONTO_CUOTA { get; set; }
+        public int NO_CUOTA { get; set; }
+        public float MONTO_CALCULADO { get; set;}
+
+    }
 
 }

@@ -92,6 +92,38 @@ namespace Caluladora_Prestamo
 
         }
 
+        public List<Cliente> SelectClietes(int id)
+        {
+
+            var Clientes = from Cl in db.Clientes
+                           where Cl.ID_CLIENTE == id
+                           select Cl;
+
+            List<Cliente> Client = new List<Cliente>();
+
+            foreach (var campos in Clientes)
+            {
+                Client.Add(new Cliente
+                {
+
+                    ID_CLIENTE = Convert.ToInt16(campos.ID_CLIENTE),
+                    NOMBRES = campos.NOMBRES,
+                    APELLIDOS = campos.APELLIDOS,
+                    CEDULA = campos.CEDULA,
+                    CELULAR = campos.CELULAR,
+                    DIRECCION = campos.DIRECCION
+
+                });
+
+
+            }
+
+            return Client;
+
+
+        }
+
+
         public void DeleteCliente(int idc)
         {
             var cliente = db.Clientes.Where(id => id.ID_CLIENTE == idc).FirstOrDefault();
@@ -189,11 +221,26 @@ namespace Caluladora_Prestamo
 
         
 
+        public void InsertPrestamo(Prestamo campos)
+        {
 
+            prestamo prestamo = new prestamo();
+
+            prestamo.ID_CLIENTE = campos.ID_CLIENTE;
+            prestamo.TIPO = campos.TIPO;
+            prestamo.MONTO = campos.MONTO;
+            prestamo.MONTO_CUOTA = campos.MONTO_CUOTA;
+            prestamo.NO_CUOTA = campos.NO_CUOTA;
+            prestamo.MONTO_CALCULADO = campos.MONTO_CALCULADO;
+            db.prestamo.Add(prestamo);
+            db.SaveChanges();
+
+
+        }
        
 
         
-
+        
 
 
 

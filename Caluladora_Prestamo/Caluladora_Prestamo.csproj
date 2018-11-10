@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarClientes.Designer.cs">
+      <DependentUpon>BuscarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tablas.cs" />
     <Compile Include="Clientes.cs">
       <DependentUpon>SQLModel.tt</DependentUpon>
@@ -95,11 +101,11 @@
     <Compile Include="FrmCobros.Designer.cs">
       <DependentUpon>FrmCobros.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModificarUsers.cs">
+    <Compile Include="FrmModificarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModificarUsers.Designer.cs">
-      <DependentUpon>FrmModificarUsers.cs</DependentUpon>
+    <Compile Include="FrmModificarClientes.Designer.cs">
+      <DependentUpon>FrmModificarClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrestamo.cs">
       <SubType>Form</SubType>
@@ -149,6 +155,9 @@
     <Compile Include="txtAutoexplicativo.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="BuscarClientes.resx">
+      <DependentUpon>BuscarClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,8 +167,8 @@
     <EmbeddedResource Include="FrmCobros.resx">
       <DependentUpon>FrmCobros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModificarUsers.resx">
-      <DependentUpon>FrmModificarUsers.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModificarClientes.resx">
+      <DependentUpon>FrmModificarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrestamo.resx">
       <DependentUpon>FrmPrestamo.cs</DependentUpon>

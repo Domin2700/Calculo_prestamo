@@ -59,5 +59,7 @@ namespace Caluladora_Prestamo
             controls.Limpiar(this);
 
         }
+
+      
     }
 }

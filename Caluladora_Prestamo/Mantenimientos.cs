@@ -24,7 +24,7 @@ namespace Caluladora_Prestamo
 
         private void BtnUsuarios_Click(object sender, EventArgs e)
         {
-            FrmModificarUsers users = new FrmModificarUsers();
+            FrmModificarClientes users = new FrmModificarClientes();
             users.ShowDialog();
         }
 

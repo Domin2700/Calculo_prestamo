@@ -59,7 +59,7 @@ namespace Caluladora_Prestamo
 
 
 
-                if (RdbSemanal.Checked)// Si mi RadioButton Semanal esta Chekado entonces mi variable Tipo vale 1
+                if (RdbDiario.Checked)// Si mi RadioButton Semanal esta Chekado entonces mi variable Tipo vale 1
                 {
                     tipo = 1;
 
@@ -129,6 +129,7 @@ namespace Caluladora_Prestamo
         {// Aqui estamo en el evento CellClick de mi DgvTarifa 
 
             id = Convert.ToInt16(DgvTarifas.CurrentRow.Cells["ID_TARIFA"].Value);
+            EpError.Clear();
 
 
             if (e.ColumnIndex == 0)// Aqui pregunto si el indice de la columna es 0 
@@ -140,7 +141,7 @@ namespace Caluladora_Prestamo
 
                 if(Convert.ToUInt16(DgvTarifas.CurrentRow.Cells["TIPO"].Value) == 1 )
                 {
-                    RdbSemanal.Select();
+                    RdbDiario.Select();
 
                 }
                 else
@@ -189,7 +190,7 @@ namespace Caluladora_Prestamo
 
 
             {
-                if (RdbSemanal.Checked)// Si mi RadioButton Semanal esta Chekado entonces mi variable Tipo vale 1
+                if (RdbDiario.Checked)// Si mi RadioButton Semanal esta Chekado entonces mi variable Tipo vale 1
                 {
                     tipo = 1;
 
@@ -218,6 +219,7 @@ namespace Caluladora_Prestamo
                 BtnActualizar.Visible = false;
                 DgvTarifas.DataSource = mantenimiento.SelectTarifa();
                 OrganizarColumns();
+                EpError.Clear();
 
             }
 
@@ -275,11 +277,6 @@ namespace Caluladora_Prestamo
             EpError.Clear();
         }
 
-        private void TxtMonto_MouseClick_1(object sender, MouseEventArgs e)
-        {
-            EpError.Clear();
-        }
-
         private void TxtCuota_MouseClick(object sender, MouseEventArgs e)
         {
             EpError.Clear();
@@ -290,9 +287,6 @@ namespace Caluladora_Prestamo
             EpError.Clear();
         }
 
-        private void txtAutoexplicativo1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

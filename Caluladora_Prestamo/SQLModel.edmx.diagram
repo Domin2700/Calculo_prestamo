@@ -4,15 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f688992a2acb4c27abfdae1930942cda" Name="Diagram1">
+      <Diagram DiagramId="f688992a2acb4c27abfdae1930942cda" Name="Diagram1" ZoomLevel="96">
         <EntityTypeShape EntityType="Prestamo_Entity.Clientes" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Prestamo_Entity.pagos" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Prestamo_Entity.prestamo" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Prestamo_Entity.tarifas" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Prestamo_Entity.tarifas" Width="1.5" PointX="2.125" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="Prestamo_Entity.FK__pagos__0000000000000051" ManuallyRouted="false" />
         <AssociationConnector Association="Prestamo_Entity.FK__prestamo__0000000000000033" ManuallyRouted="false" />
         <AssociationConnector Association="Prestamo_Entity.FK__pagos__000000000000004D" ManuallyRouted="false" />
-        <AssociationConnector Association="Prestamo_Entity.FK__prestamo__0000000000000037" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

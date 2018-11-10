@@ -37,7 +37,7 @@
             // 
             // BtnUsuarios
             // 
-            this.BtnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BtnUsuarios.FlatAppearance.BorderSize = 0;
             this.BtnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -45,9 +45,9 @@
             this.BtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnUsuarios.Font = new System.Drawing.Font("Sitka Small", 13.8F);
             this.BtnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuarios.Image")));
-            this.BtnUsuarios.Location = new System.Drawing.Point(101, 63);
+            this.BtnUsuarios.Location = new System.Drawing.Point(126, 50);
             this.BtnUsuarios.Name = "BtnUsuarios";
-            this.BtnUsuarios.Size = new System.Drawing.Size(352, 328);
+            this.BtnUsuarios.Size = new System.Drawing.Size(362, 335);
             this.BtnUsuarios.TabIndex = 0;
             this.BtnUsuarios.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -56,7 +56,7 @@
             // 
             // BtnTarfa
             // 
-            this.BtnTarfa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnTarfa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnTarfa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BtnTarfa.FlatAppearance.BorderSize = 0;
             this.BtnTarfa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -64,9 +64,9 @@
             this.BtnTarfa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTarfa.Font = new System.Drawing.Font("Sitka Small", 13.8F);
             this.BtnTarfa.Image = ((System.Drawing.Image)(resources.GetObject("BtnTarfa.Image")));
-            this.BtnTarfa.Location = new System.Drawing.Point(502, 51);
+            this.BtnTarfa.Location = new System.Drawing.Point(508, 50);
             this.BtnTarfa.Name = "BtnTarfa";
-            this.BtnTarfa.Size = new System.Drawing.Size(365, 340);
+            this.BtnTarfa.Size = new System.Drawing.Size(362, 335);
             this.BtnTarfa.TabIndex = 1;
             this.BtnTarfa.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnTarfa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -93,9 +93,9 @@
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalir.Font = new System.Drawing.Font("Sitka Small", 13.8F);
             this.BtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalir.Image")));
-            this.BtnSalir.Location = new System.Drawing.Point(-1, 12);
+            this.BtnSalir.Location = new System.Drawing.Point(12, 12);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(96, 81);
+            this.BtnSalir.Size = new System.Drawing.Size(91, 81);
             this.BtnSalir.TabIndex = 47;
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);

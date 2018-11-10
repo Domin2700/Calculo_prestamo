@@ -12,7 +12,7 @@ namespace Caluladora_Prestamo
 {
 
 
-    public partial class FrmModificarUsers : Form
+    public partial class FrmModificarClientes : Form
 
     {
         Controles control = new Controles();
@@ -20,7 +20,7 @@ namespace Caluladora_Prestamo
         Mantenimiento mantenimiento = new Mantenimiento();
         int id;
 
-        public FrmModificarUsers()
+        public FrmModificarClientes()
         {
             InitializeComponent();
         }
@@ -89,7 +89,7 @@ namespace Caluladora_Prestamo
                 };
 
                 mantenimiento.UpdateCliente(campos);
-                control.Limpiar(this);
+                control.Limpiar(groupBox1);
                 DgvUsuarios.DataSource = mantenimiento.SelectClietes();
                 ModificarColumnas();
 
@@ -187,7 +187,9 @@ namespace Caluladora_Prestamo
 
         private void txtAutoexplicativo1_TextChanged(object sender, EventArgs e)
         {
-            DgvUsuarios.DataSource = mantenimiento.SelectClietes(txtAutoexplicativo1.Text);
+            DgvUsuarios.DataSource = mantenimiento.SelectClietes(TxtBuscar.Text);
         }
+
+        
     }
 }

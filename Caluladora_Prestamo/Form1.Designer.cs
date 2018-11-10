@@ -39,6 +39,8 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoPrestamoToolStripMenuItem,
@@ -48,19 +50,19 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1095, 303);
+            this.menuStrip1.Size = new System.Drawing.Size(1100, 268);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "Menu";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // nuevoPrestamoToolStripMenuItem
             // 
+            this.nuevoPrestamoToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.nuevoPrestamoToolStripMenuItem.Font = new System.Drawing.Font("Sitka Small", 13.8F);
             this.nuevoPrestamoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nuevoPrestamoToolStripMenuItem.Image")));
             this.nuevoPrestamoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.nuevoPrestamoToolStripMenuItem.Name = "nuevoPrestamoToolStripMenuItem";
-            this.nuevoPrestamoToolStripMenuItem.Size = new System.Drawing.Size(268, 295);
-            this.nuevoPrestamoToolStripMenuItem.Text = "Nuevo Prestamo";
+            this.nuevoPrestamoToolStripMenuItem.Size = new System.Drawing.Size(268, 260);
             this.nuevoPrestamoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.nuevoPrestamoToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.nuevoPrestamoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPrestamoToolStripMenuItem_Click);
@@ -71,8 +73,7 @@
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(268, 295);
-            this.clientesToolStripMenuItem.Text = "Cobrar";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(268, 260);
             this.clientesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -82,8 +83,7 @@
             this.mantenimientoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mantenimientoToolStripMenuItem.Image")));
             this.mantenimientoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(268, 295);
-            this.mantenimientoToolStripMenuItem.Text = "Nuevo Cliente";
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(268, 260);
             this.mantenimientoToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
@@ -93,8 +93,7 @@
             this.jToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("jToolStripMenuItem.Image")));
             this.jToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.jToolStripMenuItem.Name = "jToolStripMenuItem";
-            this.jToolStripMenuItem.Size = new System.Drawing.Size(268, 295);
-            this.jToolStripMenuItem.Text = "Mantenimiento";
+            this.jToolStripMenuItem.Size = new System.Drawing.Size(268, 260);
             this.jToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.jToolStripMenuItem.Click += new System.EventHandler(this.jToolStripMenuItem_Click);
             // 
@@ -102,14 +101,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1095, 706);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1100, 706);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Sitka Small", 13.8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximumSize = new System.Drawing.Size(1118, 753);
+            this.MinimumSize = new System.Drawing.Size(1118, 753);
             this.Name = "FmrPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora de prestamos";
             this.Load += new System.EventHandler(this.FmrPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
