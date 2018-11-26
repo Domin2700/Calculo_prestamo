@@ -39,7 +39,41 @@ namespace Caluladora_Prestamo
         public float MONTO_CUOTA { get; set; }
         public int NO_CUOTA { get; set; }
         public float MONTO_CALCULADO { get; set;}
+        public string FECHA_PRESTAMO { get; set; }
 
     }
+
+    public class Pagos
+    {
+        public int ID_PAGO { get; set; }
+        public int ID_PRESTAMO { get; set; }
+        public int ID_CLIENTE { get; set; }
+        public int NO_CUOTA { get; set; }
+        public float MONTO_CUOTA { get; set; }
+        public string FECHA_PAGO { get; set; }
+
+
+
+    }
+
+    public class join_prestamo
+    {
+        public int ID_CLIENTE { get; set; }
+        public string NOMBRES { get; set; }
+        public string APELLIDOS { get; set; }
+        public string CEDULA { get; set; }
+        public string CELULAR { get; set; }
+        public int ID_PRESTAMO { get; set; }
+        public string TIPO { get; set; }
+        public float MONTO { get; set; }
+        public float MONTO_CUOTA { get; set; }
+        public int NO_CUOTA { get; set; }
+        public float MONTO_CALCULADO { get; set; }
+        public string FECHA_PRESTAMO { get; set; }
+      
+
+    }
+
+    
 
 }

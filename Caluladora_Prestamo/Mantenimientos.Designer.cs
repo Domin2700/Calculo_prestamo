@@ -114,6 +114,7 @@
             this.MaximumSize = new System.Drawing.Size(949, 463);
             this.MinimumSize = new System.Drawing.Size(949, 463);
             this.Name = "FomMantenimientos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimientos";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -36,27 +36,44 @@ namespace Caluladora_Prestamo
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            /*if (new Controles().Validar(this))
+         
+            if(TxtDireccion.Text.Length == 0 )
+
             {
+                EpError.SetError(TxtDireccion,"Introdusca la direccion");
+                EpError.Clear();
 
-                
+            }
 
-            }*/
-
-
-            Cliente campos = new Cliente
+            if(TxtApellidos.Text.Length == 0)
             {
-                NOMBRES = TxtNombres.Text,
-                APELLIDOS = TxtApellidos.Text,
-                CEDULA = TxtCedula.Text,
-                CELULAR = TxtCelular.Text,
-                DIRECCION = TxtDireccion.Text
-                
+                EpError.SetError(TxtApellidos, "Introdusca los apellidos");
+                EpError.Clear();
 
-            };
-        
-            new Mantenimiento().InsertClientes(campos);
-            controls.Limpiar(this);
+            }
+
+            if (TxtNombres.Text.Length == 0)
+            {
+                EpError.SetError(TxtNombres, "Introdusca los nombres");
+                EpError.Clear();
+            }
+            else
+            {
+                Cliente campos = new Cliente
+                {
+                    NOMBRES = TxtNombres.Text,
+                    APELLIDOS = TxtApellidos.Text,
+                    CEDULA = TxtCedula.Text,
+                    CELULAR = TxtCelular.Text,
+                    DIRECCION = TxtDireccion.Text
+
+
+                };
+
+                new Mantenimiento().InsertClientes(campos);
+                controls.Limpiar(this);
+
+            }
 
         }
 

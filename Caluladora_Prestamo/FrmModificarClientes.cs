@@ -190,6 +190,9 @@ namespace Caluladora_Prestamo
             DgvUsuarios.DataSource = mantenimiento.SelectClietes(TxtBuscar.Text);
         }
 
-        
+        private void DgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

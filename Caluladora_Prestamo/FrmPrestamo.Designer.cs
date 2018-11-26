@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrestamo));
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "",
             ""}, -1);
             this.TxtNombres = new System.Windows.Forms.TextBox();
@@ -49,6 +49,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.CmbNoCuota = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.TxtBuscar = new textBoxAutoexplicativo.txtAutoexplicativo();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.RdbDiario = new System.Windows.Forms.RadioButton();
@@ -67,7 +68,6 @@
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCalcular = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
-            this.TxtBuscar = new textBoxAutoexplicativo.txtAutoexplicativo();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -278,17 +278,29 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 409);
+            this.label10.Location = new System.Drawing.Point(41, 409);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(309, 20);
             this.label10.TabIndex = 48;
             this.label10.Text = "______________________________";
             // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.ColorTextoVacio = System.Drawing.Color.Gray;
+            this.TxtBuscar.Font = new System.Drawing.Font("Calisto MT", 19.8F, System.Drawing.FontStyle.Bold);
+            this.TxtBuscar.Location = new System.Drawing.Point(284, 21);
+            this.TxtBuscar.Multiline = true;
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(126, 50);
+            this.TxtBuscar.TabIndex = 19;
+            this.TxtBuscar.TextoVacio = "Buscar...";
+            this.TxtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscar_KeyPress);
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(12, 61);
+            this.label15.Location = new System.Drawing.Point(41, 61);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(309, 20);
             this.label15.TabIndex = 47;
@@ -333,10 +345,10 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(55, 81);
+            this.label11.Font = new System.Drawing.Font("Sitka Small", 10.8F);
+            this.label11.Location = new System.Drawing.Point(109, 88);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(226, 35);
+            this.label11.Size = new System.Drawing.Size(180, 28);
             this.label11.TabIndex = 24;
             this.label11.Text = "Tipo de prestamo";
             // 
@@ -354,20 +366,20 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(10, 356);
+            this.label13.Font = new System.Drawing.Font("Sitka Small", 10.8F);
+            this.label13.Location = new System.Drawing.Point(40, 356);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(215, 35);
+            this.label13.Size = new System.Drawing.Size(170, 28);
             this.label13.TabIndex = 8;
             this.label13.Text = "Fecha Prestamo:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(68, 424);
+            this.label8.Font = new System.Drawing.Font("Sitka Small", 10.8F);
+            this.label8.Location = new System.Drawing.Point(109, 429);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(247, 35);
+            this.label8.Size = new System.Drawing.Size(195, 28);
             this.label8.TabIndex = 6;
             this.label8.Text = "Resumen Prestamo";
             // 
@@ -375,9 +387,9 @@
             // 
             this.ListDetalle.Font = new System.Drawing.Font("Calisto MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListDetalle.FullRowSelect = true;
-            listViewItem5.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
             this.ListDetalle.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
+            listViewItem1});
             this.ListDetalle.Location = new System.Drawing.Point(16, 462);
             this.ListDetalle.Name = "ListDetalle";
             this.ListDetalle.Size = new System.Drawing.Size(394, 328);
@@ -388,10 +400,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(10, 236);
+            this.label9.Font = new System.Drawing.Font("Sitka Small", 10.8F);
+            this.label9.Location = new System.Drawing.Point(40, 239);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(187, 35);
+            this.label9.Size = new System.Drawing.Size(149, 28);
             this.label9.TabIndex = 5;
             this.label9.Text = "No. de cuotas:";
             // 
@@ -407,20 +419,20 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 292);
+            this.label7.Font = new System.Drawing.Font("Sitka Small", 10.8F);
+            this.label7.Location = new System.Drawing.Point(40, 295);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(229, 35);
+            this.label7.Size = new System.Drawing.Size(182, 28);
             this.label7.TabIndex = 3;
             this.label7.Text = "Pago por dia RD$:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Sitka Small", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 169);
+            this.label6.Font = new System.Drawing.Font("Sitka Small", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(40, 180);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(157, 35);
+            this.label6.Size = new System.Drawing.Size(123, 28);
             this.label6.TabIndex = 2;
             this.label6.Text = "Monto RD$:";
             // 
@@ -501,18 +513,6 @@
             this.BtnLimpiar.TabIndex = 18;
             this.BtnLimpiar.UseVisualStyleBackColor = true;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
-            // 
-            // TxtBuscar
-            // 
-            this.TxtBuscar.ColorTextoVacio = System.Drawing.Color.Gray;
-            this.TxtBuscar.Font = new System.Drawing.Font("Calisto MT", 19.8F, System.Drawing.FontStyle.Bold);
-            this.TxtBuscar.Location = new System.Drawing.Point(16, 20);
-            this.TxtBuscar.Multiline = true;
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(126, 50);
-            this.TxtBuscar.TabIndex = 19;
-            this.TxtBuscar.TextoVacio = "Buscar...";
-            this.TxtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscar_KeyPress);
             // 
             // FrmPrestamo
             // 

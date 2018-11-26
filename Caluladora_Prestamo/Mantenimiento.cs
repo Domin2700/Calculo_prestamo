@@ -176,7 +176,7 @@ namespace Caluladora_Prestamo
                          select Tr;
 
 
-            List < Tarifa > tarif = new List<Tarifa>();
+            List<Tarifa> tarif = new List<Tarifa>();
             foreach (var campos in tarifa)
             {
                 tarif.Add(new Tarifa
@@ -219,7 +219,7 @@ namespace Caluladora_Prestamo
 
 
 
-        
+
 
         public void InsertPrestamo(Prestamo campos)
         {
@@ -232,22 +232,144 @@ namespace Caluladora_Prestamo
             prestamo.MONTO_CUOTA = campos.MONTO_CUOTA;
             prestamo.NO_CUOTA = campos.NO_CUOTA;
             prestamo.MONTO_CALCULADO = campos.MONTO_CALCULADO;
+            prestamo.FECHA_PRESTAMO = Convert.ToDateTime(campos.FECHA_PRESTAMO);
             db.prestamo.Add(prestamo);
             db.SaveChanges();
 
 
         }
-       
-
-        
-        
 
 
 
+        public List<join_prestamo> SelectJoinPrestamo()
+
+        {
+            var join = from cliente in db.Clientes 
+                       join prestamo in db.prestamo
+                       on cliente.ID_CLIENTE equals prestamo.ID_CLIENTE
+                      
+
+                       orderby prestamo.FECHA_PRESTAMO descending
+
+                       select new
+                       {
+                           cliente.ID_CLIENTE,
+                           cliente.NOMBRES,
+                           cliente.APELLIDOS,
+                           cliente.CEDULA,
+                           cliente.CELULAR,
+                           prestamo.ID_PRESTAMO,
+                           prestamo.TIPO,
+                           prestamo.MONTO,
+                           prestamo.MONTO_CUOTA,
+                           prestamo.NO_CUOTA,
+                           prestamo.MONTO_CALCULADO,
+                           prestamo.FECHA_PRESTAMO,
+                        
 
 
 
 
+
+                       };
+
+            List<join_prestamo> prest = new List<join_prestamo>();
+            foreach (var campos in join)
+            {
+                prest.Add(new join_prestamo {
+
+                    ID_CLIENTE = Convert.ToInt16(campos.ID_CLIENTE),
+                    NOMBRES = campos.NOMBRES.ToString(),
+                    APELLIDOS = campos.APELLIDOS.ToString(),
+                    CEDULA = campos.CEDULA.ToString(),
+                    CELULAR = campos.CELULAR.ToString(),
+                    ID_PRESTAMO = Convert.ToInt16(campos.ID_PRESTAMO),
+                    TIPO = campos.TIPO.ToString(),
+                    MONTO = float.Parse(campos.MONTO.ToString()),
+                    MONTO_CUOTA = float.Parse(campos.MONTO_CUOTA.ToString()),
+                    NO_CUOTA = Convert.ToInt16(campos.NO_CUOTA),
+                    MONTO_CALCULADO = float.Parse(campos.MONTO_CALCULADO.ToString()),
+                    FECHA_PRESTAMO = campos.FECHA_PRESTAMO.ToString()
+                    
+
+
+
+                });
+
+
+
+
+            }
+
+
+            return prest;
+
+
+
+
+        }
+
+
+        public void InsertPagos(Pagos campos)
+
+        {
+            pagos pago = new pagos();
+
+            pago.ID_PAGO = campos.ID_PAGO;
+            pago.ID_PRESTAMO = campos.ID_PRESTAMO;
+            pago.ID_CLIENTE = campos.ID_CLIENTE;
+            pago.NO_CUOTA = campos.NO_CUOTA;
+            pago.MONTO_CUOTA = campos.MONTO_CUOTA;
+            pago.FECHA_PAGO = Convert.ToDateTime(campos.FECHA_PAGO);
+            db.pagos.Add(pago);
+            db.SaveChanges();
+
+
+
+
+
+
+
+        }
+
+
+        public List<Pagos> SelectPagos()
+        {
+            var pagos = from p in db.pagos
+                        select p;
+
+            List<Pagos> pago = new List<Pagos>();
+
+            foreach(var campos in pagos)
+            {
+                pago.Add(new Pagos {
+
+                    ID_PAGO = Convert.ToInt16(campos.ID_PAGO),
+                    ID_PRESTAMO = Convert.ToInt16(campos.ID_PRESTAMO),
+                    ID_CLIENTE = Convert.ToInt16(campos.ID_CLIENTE),
+                    NO_CUOTA = Convert.ToInt16(campos.NO_CUOTA),
+                    MONTO_CUOTA = float.Parse(campos.MONTO_CUOTA.ToString()),
+                    FECHA_PAGO = campos.FECHA_PAGO.ToString()
+
+
+
+
+                });
+
+
+            }
+
+            return pago;
+
+        }
+
+
+
+
+
+
+
+    
 
     }
 }

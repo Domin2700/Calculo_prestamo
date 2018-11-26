@@ -71,7 +71,8 @@ namespace Caluladora_Prestamo
                     MONTO = float.Parse(CmbMonto.Text),
                     MONTO_CUOTA = float.Parse(CmbPagoXdia.Text),
                     NO_CUOTA = Convert.ToInt16(CmbNoCuota.Text),
-                    MONTO_CALCULADO = calculo
+                    MONTO_CALCULADO = calculo,
+                    FECHA_PRESTAMO = TxtFechaPrestamo.Text
                     
 
 
@@ -126,7 +127,7 @@ namespace Caluladora_Prestamo
                     else if (RdbDiario.Checked)
                     {
 
-                        tipo = "Diario";
+                        tipo = "DIARIO";
 
                     }
                     calculo = (float.Parse(CmbPagoXdia.Text) * float.Parse(CmbNoCuota.Text));
@@ -221,8 +222,8 @@ namespace Caluladora_Prestamo
         private void FrmPrestamo_Activated(object sender, EventArgs e)
         {
 
-            if (BuscarClientes.idCliente != 0)
-            {
+          /* if (BuscarClientes.idCliente != 0)
+            {*/
 
                 ListDetalle.Items.Clear();
 
@@ -241,9 +242,9 @@ namespace Caluladora_Prestamo
                 }
 
 
-            }
+            //}
 
-            BuscarClientes.idCliente = 0;
+           BuscarClientes.idCliente = 0;
             TxtFechaPrestamo.Text = DateTime.Now.ToString("dd-MM-yyyy");
 
 
